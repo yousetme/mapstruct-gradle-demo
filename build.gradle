@@ -1,25 +1,9 @@
-buildscript {
-    apply from: "http://saos-publish-test.chj.cloud/gradle/version.gradle"
-    repositories {
-        maven { url "https://repo.spring.io/plugins-release" }
-        maven { url "https://plugins.gradle.org/m2/" }
-        mavenCentral()
-        jcenter()
-    }
-    dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.3.4.RELEASE"
-        classpath "io.spring.gradle:propdeps-plugin:0.0.10.RELEASE"
-        classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
-    }
-}
-
-
 plugins {
     id 'org.springframework.boot' version '2.2.2.RELEASE'
     id "io.freefair.lombok" version "3.6.6"
-//    id 'war'
     id 'java'
     id 'net.ltgt.apt' version '0.20'
+     id "net.ltgt.apt-eclipse" version "0.18"
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -98,4 +82,6 @@ dependencies {
     compile group: 'org.mapstruct', name: 'mapstruct-jdk8', version: '1.4.1.Final'
     implementation "org.mapstruct:mapstruct:1.4.1.Final"
     annotationProcessor "org.mapstruct:mapstruct-processor:1.4.1.Final"
+    annotationProcessor ('com.google.auto.value:auto-value:1.5')
+
 }

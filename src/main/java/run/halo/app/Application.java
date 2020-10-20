@@ -4,9 +4,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * Halo main class.
@@ -15,8 +13,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @date 2017-11-14
  */
 @SpringBootApplication
-@EnableJpaAuditing
-@EnableScheduling
 @EnableAsync
 public class Application  {
 
